@@ -39,7 +39,7 @@
 
 <leetcode>
 
-### 461. Hamming Distance (easy)
+### 461. [Hamming Distance](./c/461_HammingDistance/anw.c) (easy)
 
 [Leetcode](https://leetcode.com/problems/hamming-distance/) / [力扣](https://leetcode.cn/problems/hamming-distance/)
 
