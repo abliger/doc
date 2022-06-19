@@ -1,3 +1,9 @@
+<!--
+ * @Author: abliger
+ * @Date: 2022-06-17 20:03:51
+ * @LastEditTime: 2022-06-19 14:45:24
+ * @Description: 
+-->
 # 位运算
 
 位运算就是直接操作二进制数的运算方式.
@@ -68,7 +74,7 @@
 
 <leetcode>
 
-### 461. [Hamming Distance](./c/461_HammingDistance/anw.c) (easy)
+### 461. [Hamming Distance](https://leetcode.cn/problems/hamming-distance/solution/by-abliger-h3pe/) (easy)
 
 [Leetcode](https://leetcode.com/problems/hamming-distance/) / [力扣](https://leetcode.cn/problems/hamming-distance/)
 
@@ -76,14 +82,27 @@
 
 考点:按位或、按位与
 
+
+### 67. Add Binary
+
+[Leetcode](https://leetcode.com/problems/add-binary/) / [力扣](https://leetcode.cn/problems/add-binary/)
+
+考点:字符串操作,位运算加法
+
 </leetcode>
 
-## 饮用
+## 引用
 
 [位运算简介及实用技巧1：基础篇](./referance/位运算简介及实用技巧1：基础篇.html)
+
 [位运算简介及实用技巧2：进阶篇(1)](./referance/位运算简介及实用技巧2：进阶篇(1).html)
+
 [位运算简介及实用技巧3：进阶篇(2)](./referance/位运算简介及实用技巧3：进阶篇(2).html)
+
 [位运算简介及实用技巧4：实战篇](./referance/位运算简介及实用技巧4：实战篇.html)
+
 [趣题：用位运算生成下一个含有k个1的二进制数](./referance/趣题：用位运算生成下一个含有k个1的二进制数.html)
+
 [位运算有什么奇技淫巧？](https://www.zhihu.com/question/38206659)
-[Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html#OperationCounting)
+
+[Bit Twiddling Hacks](./referance/Bit%20Twiddling%20Hacks.html)
