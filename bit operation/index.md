@@ -89,8 +89,16 @@
 
 考点:字符串操作,位运算加法
 
+### 136. [Seingle Number](https://leetcode.cn/problems/single-number/solution/by-abliger-a33j/) (Easy)
+
+[Leetcode](https://leetcode.com/problems/single-number/) /[力扣](https://leetcode.cn/problems/single-number/)
+
+
+
+
 </leetcode>
 
+考点:异或运算
 ## 引用
 
 [位运算简介及实用技巧1：基础篇](./referance/位运算简介及实用技巧1：基础篇.html)
