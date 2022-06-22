@@ -93,8 +93,13 @@
 
 [Leetcode](https://leetcode.com/problems/single-number/) /[力扣](https://leetcode.cn/problems/single-number/)
 
+### 268. [Missing Number](https://leetcode.cn/problems/missing-number/solution/by-abliger-02we/) (Easy)
 
+[Leetcode](https://leetcode.com/problems/missing-number/) /[力扣](https://leetcode.cn/problems/missing-number/)
 
+考点:异或运算
+上两道题都可以通过异或运算,算出来出现一次的数字.但是 第二道题绕了一个弯,我们只需要把所有数字再次添加到数组中就变为第一道题的情况.
+第二题也可用Map表来完成,可以是使用数学运算(计算数组 0 ~ n 总大小 ,再挨个减去数组元素)即可得到结果.
 
 </leetcode>
 
