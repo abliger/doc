@@ -39,17 +39,76 @@
 
   数据结构在计算机中的表示(又称映像)称为数据的物理结构,也叫做存储结构.其中存储结构在计算机存在两种不同的表示方法:
     
-    1. 顺序映像(顺序存储结构)      借助元素在存储器中的相对位置表示数据间的逻辑关系
-    2. 非顺序映像(链式存储结构)    借助指示元素的指针表示数据元素间的逻辑关系
+  1. 顺序映像(顺序存储结构)      借助元素在存储器中的相对位置表示数据间的逻辑关系
+  2. 非顺序映像(链式存储结构)    借助指示元素的指针表示数据元素间的逻辑关系
 ### 数据类型
   数据类型是一个值的集合和定义在这个值集上的一组操作的总称.
   数据类型大体分为两类:
 
-    1. 原子类型(基本数据类型)
-    2. 结构类型(引用数据类型)
+  1. 原子类型(基本数据类型)
+  2. 结构类型(引用数据类型)
 
 ### 抽象数据类型
   抽象数据类型是指一个数学模型以及定义在该模型上的一组操作.
 
 ### 多形数据类型
   多形数据类型是指其值的成分不确定的数据类型.类似多态?
+
+## 算法和算法分析
+  算法是对特定问题求解步骤对一种描述,它是指令对有限序列,其中一条指令表示一个或多个操作,一个算法包括五条性质: 有穷性、确定性、可行性、输入、输出.
+
+  再谈论算法分析前我们可能需要回顾以下数学知识:
+### 可能用到对数学知识
+
+  1. 指数
+      $$
+        X^A X^B = X^{A+B}    \\
+        \frac{X^A}{X^B} = X^{A-B} \\
+        (X^A)^B = X^AB \\
+        X^N + X^N = 2X^N \neq X^{2N} \\
+        2^N + 2^N = 2^{N+1}
+      $$
+  2. 对数
+
+      定义: 当且仅当 $log_ x B = A$,$X^A = B$.在本书中除特殊说明,所有对对数都以 2 为底.
+
+      有定理:
+      $$
+        log_ A B = \frac{log_ C B}{log_ C A} ; C > 0 \\
+        log AB = log A + log B \\
+        log A/B = log A - log B \\
+        log A^B = Blog A \\
+        log X < X (对所有对X成立) \\
+        log 1 = 0,log 2 = 1,log 2048 =10,log 1048576 = 20 
+      $$
+  3. 级数
+      
+      最容易记住对公式是 
+      $$\begin{aligned} \sum_{i=0}^N2^i \end{aligned} = 2^{N+1} - 1 $$ 
+      和 
+      $$
+        \begin{aligned} \sum_{i=0}^NA^i \end{aligned} = \frac{A^{N+1} - 1}{A-1} \\
+        \begin{aligned} \sum_{i=0}^NA^i\end{aligned} \leq \frac{1}{1-A};0<A<1
+      $$
+      另一种是算数级数
+      $$                                                                                                                               
+        \begin{aligned} \sum_{i=1}^Ni \end{aligned} = \frac{N(N +1)}{2} \approx \frac {N^2}{2} \\
+        \begin{aligned} \sum_{i=1}^Ni^2 \end{aligned} = \frac{N(N +1)(2N +1)}{6} \approx \frac {N^3}{3} \\
+        \begin{aligned} \sum_{i=1}^Ni^k \end{aligned} \approx \frac {N^{k+1}}{\mid k+1 \mid};k \neq -1 \\
+      $$
+      其中第三个公式中 k 为 -1 时 有此公式
+      $$H_N = \begin{aligned} \sum_{i=1}^N\frac{1}{i} \end{aligned} \approx log_e N$$
+
+      自然数倒数和
+      $$
+        \begin{aligned} \sum_{i=1}^N\frac{1}{i} \end{aligned} = 1 + \frac{1}{2} +\frac{1}{3} + ... + \frac{1}{n} \equiv ln N + \gamma ,其中 \gamma 是一个常数
+      $$
+  4. 模运算
+
+      定义:如果 N 整除 A 和 B,我们就说 A 与 B 模 N 同余,记为 $A \equiv B \pmod N$  
+      有定义:
+      $$
+        A + C \equiv B + C \pmod N \\
+        AD \equiv BD \pmod N
+      $$
+      
