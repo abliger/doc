@@ -4,3 +4,4 @@ out
 leetcode.iml
 .DS_Store
 *.out
+*.o
