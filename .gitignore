@@ -3,3 +3,4 @@ out
 .idea
 leetcode.iml
 .DS_Store
+*.out
