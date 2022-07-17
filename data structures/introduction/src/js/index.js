@@ -65,10 +65,10 @@ let maxsubSequenceSum4 = (array) => {
   let thisSum = maxSum = 0
   for (let i = 0; i < array.length; i++) {
     thisSum += array[i]
-    if (thisSum > maxSum) {
-      maxSum = thisSum
-    } else if (thisSum < 0) {
+    if (thisSum < 0) {
       thisSum = 0
+    } else if (thisSum > maxSum) {
+      maxSum = thisSum
     }
   }
   return maxSum
