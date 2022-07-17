@@ -158,5 +158,5 @@ $$
 $\vartriangle$ 转换为 Y 型等效电路:
 $各个电阻 = \frac {\vartriangle 中相邻电阻的乘积} {\vartriangle 电阻之和}$
 
-Y 型转换为 $\vartriangle$ :
-$R_A = \farc {Y 中各个电阻两两相乘之和}{Y 中另一端电阻}$
+Y 型转换为 $\vartriangle$:
+$R_A = \frac {Y中各个电阻两两相乘之和}{Y 中另一端电阻}$
