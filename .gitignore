@@ -6,3 +6,4 @@ leetcode.iml
 *.out
 *.o
 *.random
+.vscode
