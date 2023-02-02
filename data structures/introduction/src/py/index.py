@@ -44,8 +44,8 @@ def maxsubSequenceSum3(arr: list, start: int, end: int) -> int:
 
 def maxsubSequenceSum4(arr: list) -> int:
     max, cmax = 0, 0
-    for i in range(len(arr)):
-        cmax += arr[i]
+    for i in arr:
+        cmax += i
         if max < cmax:
             max = cmax
         elif cmax < 0:
