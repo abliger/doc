@@ -39,6 +39,11 @@ brew install npm
 npm config set registry https://registry.npm.taobao.org
 ## app
 brew install iterm2
+brew install menubarx		
+brew install visual-studio-code
+brew install typora
+brew install iina
+brew install parallels
 
 ## term
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -69,7 +74,10 @@ echo "alias ls='lsd'
 alias l='ls -l' 
 alias la='ls -a' 
 alias lla='ls -la' 
-alias lt='ls --tree'" >> ~/.zshrc
+alias lt='ls --tree'
+alias pip='pip3'
+alias py='python3'
+" >> ~/.zshrc
 
 brew install git-dalta
 
@@ -90,3 +98,12 @@ echo "[core]
 
 [diff]
     colorMoved = default" >> ~/.gitconfig
+
+brew install rich ## show file content
+
+# 安装 manim
+brew install py3cairo ffmpeg
+brew install pango scipy
+pip3 install manim
+# 安装 manim 后选择安装
+brew install --cask mactex-no-gui
