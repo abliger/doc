@@ -100,6 +100,7 @@ echo "[core]
     colorMoved = default" >> ~/.gitconfig
 
 brew install rich ## show file content
+brew install ripgrep
 
 # 安装 manim
 brew install py3cairo ffmpeg
