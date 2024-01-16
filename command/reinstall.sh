@@ -4,42 +4,44 @@ echo "输入 clashx-pro 开放的端口号"
 read point
 
 export https_proxy=127.0.0.1:$point
-export http_proxy=127.0.0.1:$point      
+export http_proxy=127.0.0.1:$point
 
-if ! command -v brew &> /dev/null
-then
-echo "install brew"
-/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+if ! command -v brew &>/dev/null; then
+	echo "install brew"
+	/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 else
-echo "brew installed"
+	echo "brew installed"
 fi
 
 echo "next step enter any key or exit"
-read stop 
-if test -e /Applications/Firefox.app 
-then 
-echo 'firefox installed'
+read stop
+if test -e /Applications/Firefox.app; then
+	echo 'firefox installed'
 else
-firefox="https://download-installer.cdn.mozilla.net/pub/firefox/releases/102.9.0esr/mac/en-GB/Firefox%20102.9.0esr.dmg"
-curl $firefox -o ~/Downloads/firefox.dmg 
+	firefox="https://download-installer.cdn.mozilla.net/pub/firefox/releases/102.9.0esr/mac/en-GB/Firefox%20102.9.0esr.dmg"
+	curl $firefox -o ~/Downloads/firefox.dmg
 fi
 
 echo "next step enter any key or exit"
-read stop 
+read stop
 
 git config --global http.proxy 127.0.0.1:7890
 git config --global https.proxy 127.0.0.1:7890
+
+#### 开始安装 npm pnpm ####
+brew install npm
+brew install pnpm
+npm config set registry https://registry.npmmirror.com/
+pnpm config set registry https://registry.npmmirror.com/
 
 ## command
 brew install node
 brew install rustup-init
 brew install nvim
 brew install wget
-brew install npm
-npm config set registry https://registry.npm.taobao.org
 ## app
 brew install iterm2
-brew install menubarx		
+brew install menubarx
 brew install visual-studio-code
 brew install typora
 brew install iina
@@ -54,19 +56,15 @@ brew install autojump
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
-echo '[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh' >> ~/.zshrc
-
+echo '[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh' >>~/.zshrc
 
 echo '请在 .zshrc 文件 plugs=(git) 中 添加   zsh-autosuggestions zsh-syntax-highlighting'
 
-
 ## nvim
-if ! test -e ~/.config/nvim 
-then
-mkdir ~/.config/nvim
+if ! test -e ~/.config/nvim; then
+	mkdir ~/.config/nvim
 fi
 git clone https://github.com/abliger/Nvim_config.git ~/.config/nvim
-
 
 ## command
 brew install lsd
@@ -77,7 +75,7 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias pip='pip3'
 alias py='python3'
-" >> ~/.zshrc
+" >>~/.zshrc
 
 brew install git-dalta
 
@@ -97,7 +95,7 @@ echo "[core]
     conflictstyle = diff3
 
 [diff]
-    colorMoved = default" >> ~/.gitconfig
+    colorMoved = default" >>~/.gitconfig
 
 brew install rich ## show file content
 brew install ripgrep
@@ -108,3 +106,6 @@ brew install pango scipy
 pip3 install manim
 # 安装 manim 后选择安装
 brew install --cask mactex-no-gui
+
+# 自动提交 git
+cargo install --locked gptcommit
