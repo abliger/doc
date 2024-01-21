@@ -172,7 +172,7 @@ A   在光标行尾插入字符
 
 5. 高级替换
 
-":substitute" 命令(缩写":s")使你可以在连续的行中执行字符串替换。下面是这个命令的一般形式:
+":substitute" 命令(缩写 ":s")使你可以在连续的行中执行字符串替换。下面是这个命令的一般形式:
 
         :[range]substitute/from/to/[flags]
 
@@ -293,19 +293,19 @@ J 命令实际上是删除所在行处的回车符
 
 2. 编辑文件
 
-    :next               命令编辑下一个文件
-    :wnext              命令保存并编辑下一个文件
-    :args               查看文件列表
-    :previous           回到前一个文件
-    :wprevious          保存再移动到前一个文件
-    :last               移动到最后到文件
-    :first              移动到第一个文件
-    :2next              向后跳转两个文件
-    :args *.txt         不退出nvim,编辑其他 txt 文本
-    :saveas filename    另存为 filename
-    :file filename      改变文件名,但不保存
-    :edit filename      打开文件
-    :view filename      只读模式打开文件
+        :next               命令编辑下一个文件
+        :wnext              命令保存并编辑下一个文件
+        :args               查看文件列表
+        :previous           回到前一个文件
+        :wprevious          保存再移动到前一个文件
+        :last               移动到最后到文件
+        :first              移动到第一个文件
+        :2next              向后跳转两个文件
+        :args *.txt         不退出nvim,编辑其他 txt 文本
+        :saveas filename    另存为 filename
+        :file filename      改变文件名,但不保存
+        :edit filename      打开文件
+        :view filename      只读模式打开文件
 
 3. 文件间快速跳转
 
@@ -323,7 +323,7 @@ J 命令实际上是删除所在行处的回车符
 
 5. 进入光标下所指文件
 
-    gf
+        gf
 
 ### 会话
 
@@ -377,6 +377,7 @@ J 命令实际上是删除所在行处的回车符
         :wqall                  关闭保存所有窗口
 
 3. 折叠
+
         :set foldmethod=indent 根据缩紧设置折叠
         zo          打开折叠
         zc          关闭折叠
@@ -392,6 +393,7 @@ J 命令实际上是删除所在行处的回车符
         zd          删除折叠
 
 4. 比较
+
         vimdiff file1 file2     使用此命令进入vim,开启比较模式
         ]c                      下一个修改点
         [c                      上一个修改点
